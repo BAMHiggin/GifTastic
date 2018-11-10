@@ -1,10 +1,11 @@
-// $(document).ready(function () {
-//     console.log("Welcome to GIFDOME");
+$(document).ready(function () {
+    console.log("Welcome to GIFDOME");
 
 //Array of moods
     var moods = [];
-
-
+ 
+    var moodTopicsArray = [ 'happy', 'sad', 'amused', 'calm', 'content', 'angry', 'energetic', 'idyllic', 'melancholy', 'giddy', 'silly', 'optimistic', 'frustrated', 'irate', 'comtemplative', 'cynical', 'dorky', 'giggly'
+    ];
 
 
 //search button click event
@@ -26,10 +27,12 @@
 
         for (var i=0; i < moods.length; i++) {
             console.log([i]);
-            $("#gifSpace").append('<div class="moods"><img src="' + moods[i].images + '"></div>');
+            $("#gifSpace").append('<div class="moods"><p> Rating: '+ moods[i].rating +'</p><img src="' + moods[i].images.fixed_height.url + '"></div>');
         }
     }
 
 
-// });
+
+
+});
 

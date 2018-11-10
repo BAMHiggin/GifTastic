@@ -10,4 +10,14 @@ background: url(./images/folk-pattern.png);
 #gifSpace {
     display: flex;
     flex-wrap:wrap;
+    padding: 10px;
+    border: 10px;
+}
+
+img {
+    padding: 10px;
+}
+p {
+    padding-top: 10px;
+    font-weight: bolder;
 }
