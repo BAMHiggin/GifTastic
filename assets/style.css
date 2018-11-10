@@ -1,0 +1,13 @@
+.head-container {
+    padding: 10px;
+}
+
+body {
+background: url(./images/folk-pattern.png);
+
+}
+
+#gifSpace {
+    display: flex;
+    flex-wrap:wrap;
+}
