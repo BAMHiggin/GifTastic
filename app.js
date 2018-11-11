@@ -20,8 +20,6 @@ $(document).ready(function () {
 
             $("#gifSpace").append(gifHTML);
             /// moved long line of code with iterations and still/animated data to it's own variable for readability when console logged
-
-
         }
     };
 
@@ -42,7 +40,10 @@ $(document).ready(function () {
         event.preventDefault();
 
         var moods = $("#searchInput").val().trim();
+        if (moods !== "") {
         moodButtonsArray.push(moods);
+        }
+
 
         renderButtons();
     });
@@ -72,7 +73,7 @@ $(document).ready(function () {
 
 
         //#myFirstApiKey, with searchItem variable to push search to giphy
-        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=AZknhNL1EbM37Zj2hqjy3FmeNpNNLmZ8&q=" + searchItem;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=AZknhNL1EbM37Zj2hqjy3FmeNpNNLmZ8&limit=15&q=" + searchItem;
 
         $.get(queryURL, function (response) {
             moods = response.data;
